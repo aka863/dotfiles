@@ -1,0 +1,4 @@
+clear Lock
+keycode 66 = Caps_Lock
+clear Mod3
+add Mod3     = Caps_Lock
