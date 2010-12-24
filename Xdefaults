@@ -1,0 +1,50 @@
+xft.dpi:       96
+!Xft.antialias: 1
+!Xft.hinting:   1
+!Xft.hintstyle: hintfull
+!Xft.rgba:      rgb
+
+urxvt.termName:  rxvt-256color
+urxvt.loginShell:         true
+urxvt.scrollBar:         false
+urxvt.internalBorder:        0
+urxvt.borderWidth:           0
+urxvt.secondaryScroll:    true
+urxvt.saveLines:         65535
+urxvt.urgentOnBell:       true
+
+urxvt*cutchars: `"()'*<>[]{|}
+urxvt.perl-ext-common: default,matcher
+urxvt.urlLauncher: firefox
+urxvt.matcher.button: 2
+urxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+urxvt.keysym.C-M-r: perl:selection:rot13
+
+urxvt.font:     -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+urxvt.boldFont: -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
+urxvt.cursorColor: #506070
+
+urxvt.transparent: true
+!Real transparency (with composite and xcompmgr)
+!urxvtTrans*depth:      32
+!urxvtTrans*background: rgba:0000/0000/0000/dddd
+!urxvtTrans*tintColor:  grey
+
+urxvt*foreground:     #DDDDDD
+urxvt*background:     #121212
+urxvt*color0:         #181818
+urxvt*color8:         #666666
+urxvt*color1:         #AE4747
+urxvt*color9:         #EE6363
+urxvt*color2:         #556B2F
+urxvt*color10:        #9ACD32
+urxvt*color3:         #DAA520
+urxvt*color11:        #FFC125
+urxvt*color4:         #6F99B4
+urxvt*color12:        #7C96B0
+urxvt*color5:         #8B7B8B
+urxvt*color13:        #E3AA00
+urxvt*color6:         #A7A15E
+urxvt*color14:        #F0E68C
+urxvt*color7:         #DDDDDD
+urxvt*color15:        #FFFFFF
