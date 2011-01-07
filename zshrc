@@ -1,7 +1,6 @@
 autoload -U compinit promptinit
 compinit
 promptinit
-
 # history
 setopt extended_history
 export HISTSIZE=5000
@@ -10,7 +9,7 @@ export SAVEHIST=4000
 
 # env
 PATH="$PATH:$HOME/bin"
-EDITOR="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
 
 # colors
 local DARKBLUE=$'%{\033[0;34m%}'
@@ -34,17 +33,19 @@ else
 fi
 
 # bindings
-bindkey '\e[1~' beginning-of-line
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[H" beginning-of-line
-bindkey "\e[7~" beginning-of-line
-bindkey '\e[4~' end-of-line
-bindkey "\e[8~" end-of-line
-bindkey "^[[4~" end-of-line 
-bindkey "^[[F" end-of-line
-bindkey "^[[3~" delete-char
-bindkey "^[3;5~" delete-char
-bindkey "^R" history-incremental-search-backward
+bindkey -M viins "\e[1~" beginning-of-line
+bindkey -M viins "^[[1~" beginning-of-line
+bindkey -M viins "^[[H" beginning-of-line
+bindkey -M viins "\e[7~" beginning-of-line
+bindkey -M viins '\e[4~' end-of-line
+bindkey -M viins "\e[8~" end-of-line
+bindkey -M viins "^[[4~" end-of-line 
+bindkey -M viins "^[[F" end-of-line
+bindkey -M viins "^[[3~" delete-char
+bindkey -M viins "^[3;5~" delete-char
+bindkey -M viins "^R" history-incremental-search-backward
+bindkey -M viins "^R" history-incremental-search-backward
+bindkey -v # vi key bindings
 
 # aliases
 alias grep='grep --color=auto'
