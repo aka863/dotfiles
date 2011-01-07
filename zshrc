@@ -44,7 +44,6 @@ bindkey -M viins "^[[F" end-of-line
 bindkey -M viins "^[[3~" delete-char
 bindkey -M viins "^[3;5~" delete-char
 bindkey -M viins "^R" history-incremental-search-backward
-bindkey -M viins "^R" history-incremental-search-backward
 bindkey -v # vi key bindings
 
 # aliases
