@@ -9,7 +9,6 @@ stop-xscreensaver=yes
 #
 font="Fontin Sans" # needs fontconfig, list fonts with fc-list
 
-ass=1 # ass styles
 ass-color=ffffff00 # RRGGBB + alpha
 #ass-border-color=12006700 # dark blue
 ass-border-color=00000050 # black with a bit of transparency
@@ -19,7 +18,7 @@ ass-font-scale=2.2
 sub-bg-alpha=0
 sub-bg-color=0 # black to white
 subfont-outline=1.2
-subfont-text-scale="2.4"
+subfont-text-scale=2.2
 subfont-blur="1" # slight blur
 subfont-encoding=unicode
 unicode=yes
