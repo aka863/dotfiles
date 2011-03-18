@@ -3,18 +3,15 @@ zoom=1 # zoom to fullscreen
 cache=25000 # cache (helps playing HD via slow network connections)
 autoq=100
 stop-xscreensaver=yes
+softvol=1 # control volume independent from system mixer
 #ontop="1" # always keep mplayer on top
 
 # subtitles...
-#
 font="Fontin Sans" # needs fontconfig, list fonts with fc-list
-
 ass-color=ffffff00 # RRGGBB + alpha
 #ass-border-color=12006700 # dark blue
 ass-border-color=00000050 # black with a bit of transparency
-ass-font-scale=2.2
-
-
+ass-font-scale=2.6
 sub-bg-alpha=0
 sub-bg-color=0 # black to white
 subfont-outline=1.2
@@ -23,11 +20,8 @@ subfont-blur="1" # slight blur
 subfont-encoding=unicode
 unicode=yes
 utf8=yes
-
 subpos="90" # put subtitles a bit higher
 subalign="2"
-
 spuaa="4" # anti-alias SSA subs. (4: best and slowest)
 spualign="-1"
-
 ffactor=10 # resample the font alphamap (10 = bold black outline)
