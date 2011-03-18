@@ -1,8 +1,10 @@
-xft.dpi:       96
-!Xft.antialias: 1
-!Xft.hinting:   1
-!Xft.hintstyle: hintfull
-!Xft.rgba:      rgb
+! xft.dpi:       96
+! Xft.antialias: 1
+! Xft.hinting:   1
+! Xft.hintstyle: hintfull
+! Xft.rgba:      rgb
+! Xft.autohint: 0
+! Xft.lcdfilter:  lcddefault
 
 urxvt.termName:  rxvt-256color
 urxvt.loginShell:         true
@@ -21,7 +23,7 @@ urxvt.underlineURLs: true
 
 urxvt.font:     -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
 urxvt.boldFont: -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-*-*
-urxvt.cursorColor: #506070
+urxvt.cursorColor: #FFFFFF
 
 urxvt.transparent: true
 !Real transparency (with composite and xcompmgr)
