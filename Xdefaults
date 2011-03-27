@@ -18,7 +18,7 @@ urxvt.urgentOnBell:       true
 ! needs https://github.com/muennich/urxvt-perls
 urxvt.perl-ext-common: ...,url-select
 urxvt.keysym.M-u: perl:url-select:select_next
-urxvt.urlLauncher: firefox
+urxvt.urlLauncher: xdg-open
 urxvt.underlineURLs: true
 
 urxvt.font:     -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-*-*

@@ -25,13 +25,6 @@ local CYAN=$'%{\e[0;36m%}'
 local GREY=$'%{\e[1;30m%}'
 local NORMAL=$'%{\e[0m%}'
 
-# prompt
-if [[ ${UID} == "0" ]]; then
-	export PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${RED}%n@%M${BLUE} %~ ${RED}\$${WHITE} ")"
-else
-	export PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${WHITE}%n@%M${BLUE} %~ ${RED}\$${WHITE} ")"
-fi
-
 # bindings
 bindkey -M viins "\e[1~" beginning-of-line
 bindkey -M viins "^[[1~" beginning-of-line
@@ -57,6 +50,23 @@ alias lrt="ls -lrt"
 alias df="pydf -h"
 alias gs="git status"
 
+# executed before each prompt
+precmd() {
+    # prompt
+    if [[ ${UID} == "0" ]]; then
+        PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${RED}%n@%M${BLUE} %~ ${RED}\$${WHITE} ")"
+    else
+        PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${WHITE}%n@%M${BLUE} %~ $(rvm_current)${RED}\$${WHITE} ")"
+    fi
+}
+
+# funcshuns
+function rvm_current {
+    ruby_version=$(~/.rvm/bin/rvm-prompt g)
+    if [ -n "$ruby_version" ]; then
+        echo "${GREEN}$ruby_version "
+    fi
+}
+
 # rvm (http://rvm.beginrescueend.com/)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
