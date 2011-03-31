@@ -30,13 +30,16 @@ bindkey -M viins "\e[1~" beginning-of-line
 bindkey -M viins "^[[1~" beginning-of-line
 bindkey -M viins "^[[H" beginning-of-line
 bindkey -M viins "\e[7~" beginning-of-line
+bindkey -M viins "\e[5~" beginning-of-history
 bindkey -M viins '\e[4~' end-of-line
 bindkey -M viins "\e[8~" end-of-line
 bindkey -M viins "^[[4~" end-of-line 
 bindkey -M viins "^[[F" end-of-line
+bindkey -M viins "\e[6~" end-of-history
 bindkey -M viins "^[[3~" delete-char
 bindkey -M viins "^[3;5~" delete-char
 bindkey -M viins "^R" history-incremental-search-backward
+bindkey -M viins "\e[2~" quoted-insert
 bindkey -v # vi key bindings
 
 # aliases
@@ -56,7 +59,7 @@ precmd() {
     if [[ ${UID} == "0" ]]; then
         PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${RED}%n@%M${BLUE} %~ ${RED}\$${WHITE} ")"
     else
-        PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${WHITE}%n@%M${BLUE} %~ $(rvm_current)${RED}\$${WHITE} ")"
+        PS1="$(print "\n${DARKBLUE}[${BLUE}%*${DARKBLUE}] ${WHITE}%n@%M$(rvm_current)${BLUE} %~ ${RED}\$${WHITE} ")"
     fi
 }
 
@@ -64,7 +67,7 @@ precmd() {
 function rvm_current {
     ruby_version=$(~/.rvm/bin/rvm-prompt g)
     if [ -n "$ruby_version" ]; then
-        echo "${GREEN}$ruby_version "
+        echo " [${GREEN}$ruby_version${WHITE}]"
     fi
 }
 
