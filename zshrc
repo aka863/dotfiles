@@ -30,12 +30,16 @@ bindkey -M viins "\e[1~" beginning-of-line
 bindkey -M viins "^[[1~" beginning-of-line
 bindkey -M viins "^[[H" beginning-of-line
 bindkey -M viins "\e[7~" beginning-of-line
+bindkey -M viins "^[OH" beginning-of-line
 bindkey -M viins "\e[5~" beginning-of-history
 bindkey -M viins '\e[4~' end-of-line
 bindkey -M viins "\e[8~" end-of-line
 bindkey -M viins "^[[4~" end-of-line 
 bindkey -M viins "^[[F" end-of-line
+bindkey -M viins "^[OF" end-of-line
 bindkey -M viins "\e[6~" end-of-history
+bindkey -M viins "^[[A" up-line-or-history
+bindkey -M viins "^[[B" down-line-or-history
 bindkey -M viins "^[[3~" delete-char
 bindkey -M viins "^[3;5~" delete-char
 bindkey -M viins "^R" history-incremental-search-backward
