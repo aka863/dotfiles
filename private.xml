@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Swap Circumflex and Less-Than everywhere</name>
+        <identifier>private.swap_circumflex_and_less_than_real</identifier>
+        <autogen>--KeyToKey-- KeyCode::GERMAN_LESS_THAN, KeyCode::GERMAN_CIRCUMFLEX</autogen>
+        <autogen>--KeyToKey-- KeyCode::GERMAN_CIRCUMFLEX, KeyCode::GERMAN_LESS_THAN</autogen>
+    </item>
+</root>
