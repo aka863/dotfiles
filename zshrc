@@ -8,7 +8,8 @@ export HISTFILE=~/.history_zsh
 export SAVEHIST=4000
 
 # env
-PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/local/sbin:$HOME/bin"
+
 export EDITOR="/usr/bin/vim"
 
 # colors
@@ -48,12 +49,12 @@ bindkey -v # vi key bindings
 
 # aliases
 alias grep='grep --color=auto'
-alias d="ls --color -h"
-alias ls="ls --color=auto -h"
-alias ll="ls --color -l -h"
-alias la="ls --color -a -h"
-alias lal="ls --color -a -l -h"
-alias lrt="ls -lrt"
+alias d="ls -hG"
+alias ls="ls -hG"
+alias ll="ls -G -l -h"
+alias la="ls -G -a -h"
+alias lal="ls -G -a -l -h"
+alias lrt="ls -lrtG"
 alias df="pydf -h"
 alias gs="git status"
 
@@ -77,3 +78,7 @@ function rvm_current {
 
 # rvm (http://rvm.beginrescueend.com/)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+if [ -f `brew --prefix`/etc/autojump ]; then
+    . `brew --prefix`/etc/autojump
+fi
